@@ -68,17 +68,18 @@ model Category {
 }
 
 model Product {
-  id             Int              @id @default(autoincrement())
-  code  String  @unique
-  detail           String
-  stock Int
-  minStock Int
-  image String
-  location String
-  createdAt      DateTime         @default(now())
-  updatedAt      DateTime         @updatedAt
-  category       Category         @relation(fields: [categoryId], references: [id])
-  categoryId     Int
+  id              Int              @id @default(autoincrement())
+  code            String           @unique
+  detail          String
+  stock           Int
+  minStock        Int
+  price           Decimal          @db.Decimal(10, 2)
+  image           String
+  location        String
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  category        Category         @relation(fields: [categoryId], references: [id])
+  categoryId      Int
   invoiceProducts InvoiceProduct[]
 }
 
