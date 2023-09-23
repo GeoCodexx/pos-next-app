@@ -1,10 +1,13 @@
-import Dashboard from "@/components/Dashboard/Dashboard";
+//import Dashboard from "@/components/Dashboard/Dashboard";
 //import Image from "next/image";
 
-export default function Home() {
+//import Dashboard from "@/components/Dashboard/Dashboard";
+import Login from "./auth/login/page";
+
+export default function App() {
   return (
     <>
-      <Dashboard />
+      <Login/>
     </>
   );
 }
